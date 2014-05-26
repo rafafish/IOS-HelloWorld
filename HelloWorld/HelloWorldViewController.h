@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelloWorldViewController : UIViewController {
+@interface HelloWorldViewController : UIViewController {    
     
+    IBOutlet UILabel *Mensagem;
+    IBOutlet UILabel *FeitoPor;
 }
+- (IBAction)Botao:(id)sender;
 
 @end

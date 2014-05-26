@@ -12,6 +12,8 @@
 
 - (void)dealloc
 {
+    [Mensagem release];
+    [FeitoPor release];
     [super dealloc];
 }
 
@@ -35,6 +37,10 @@
 
 - (void)viewDidUnload
 {
+    [Mensagem release];
+    Mensagem = nil;
+    [FeitoPor release];
+    FeitoPor = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -46,4 +52,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)Botao:(id)sender {
+    Mensagem.text = @"Ola Mundo";
+}
 @end
